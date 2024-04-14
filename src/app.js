@@ -13,8 +13,7 @@ app.use(express.static("public"));  // "static" is used to make a folder static 
 app.use(cookieParser());    // "cookie" is used to store secure cookies in the user browser
 
 
-
-
+// Importing the routes
 import userRouter from './routes/users.routes.js';
 import postRouter from './routes/posts.routes.js';
 import commentRouter from './routes/comments.routes.js';
