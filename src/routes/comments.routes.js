@@ -5,7 +5,6 @@ import { createComment, deleteComment, getAllComments } from "../controllers/com
 
 const commentRouter = Router();
 
-commentRouter.use(verifyJWT);
 
 commentRouter.route("/:postId").post(createComment).get(getAllComments);
 commentRouter.route("/c/:commentId").delete(deleteComment);
