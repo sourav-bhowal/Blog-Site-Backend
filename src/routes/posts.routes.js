@@ -6,7 +6,7 @@ import {createPost, deletePost, getAPost, getAllPosts} from "../controllers/post
 
 const postRouter = Router();
 
-
+postRouter.use(verifyJWT);
 postRouter.route("/").post(upload.single("image"),createPost).get(getAllPosts);
 postRouter.route("/:postId").delete(deletePost).get(getAPost);
 
